@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+header {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+ul {
+    position: -webkit-sticky;
+    position: sticky;
+    list-style-type: none;
+    margin: 5;
+    padding: auto;
+    overflow: hidden;
+    background-color: #2F3E4E;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: #EDF0F1;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #10151A;
+}
+.active {
+    background-color: #447EB4;
+}
+.active:hover {
+    background-color: #447EB4;
+}
+
+main {
+    padding: 10px;
+    background-color: #EDF0F1;
+    margin: auto;
+    margin-top: auto;
+    overflow-x: auto;
+}
