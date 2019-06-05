@@ -1,18 +1,23 @@
 * {
     box-sizing: border-box;
-    font-family: Verdana;
+    font-family: Nunito;
+}
+
+body {
+    /*background: url("Background.jpg");
+    background-attachment: fixed;
+    background-position: center center;*/
+    margin: 0px;
 }
 
 #navbar {
-    overflow: hidden;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 0px;
     list-style-type: none;
-    margin: 5;
-    padding: auto;
     overflow: hidden;
     background-color: #2F3E4E;
+    color: #EDF0F1;
 }
 #navbar a {
     float: left;
@@ -24,12 +29,19 @@
 }
 #navbar a:hover {
     background-color: #10151A;
+    animation-name: colorFade;
+    animation-duration: 1s;
 }
 .active {
     background-color: #447EB4;
 }
 .active:hover {
-    background-color: #447EB4;
+    background-color: #447EB4 !important;
+    animation-duration: 0s !important;
+}
+@keyframes colorFade {
+    from {background-color: #2F3E4E;}
+    to {background-color: #10151A;}
 }
 
 main {
@@ -38,4 +50,14 @@ main {
     margin: auto;
     margin-top: auto;
     overflow-x: auto;
+}
+
+footer {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    padding: 10px;
+    width: 100%;
+    color: #818C8D;
+    background-color: #EDF0F1;
 }
