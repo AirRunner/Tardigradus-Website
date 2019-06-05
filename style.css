@@ -2,31 +2,27 @@
     box-sizing: border-box;
     font-family: Verdana;
 }
-header {
-    position: -webkit-sticky;
-    position: sticky;
-}
 
-ul {
+#navbar {
+    overflow: hidden;
     position: -webkit-sticky;
     position: sticky;
+    top: 0;
     list-style-type: none;
     margin: 5;
     padding: auto;
     overflow: hidden;
     background-color: #2F3E4E;
 }
-li {
+#navbar a {
     float: left;
-}
-li a {
     display: block;
     color: #EDF0F1;
     text-align: center;
     padding: 15px 15px;
     text-decoration: none;
 }
-li a:hover {
+#navbar a:hover {
     background-color: #10151A;
 }
 .active {
