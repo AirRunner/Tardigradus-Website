@@ -18,7 +18,34 @@
 		</div>
 	</header>
 	<main>
-		<p>Bonjour</p>
+		<form action="javascript:submit()" class="box">
+			<div>
+				<label for="first_name">First name</label><br>
+				<input type="text" id="first_name" placeholder="First name" required>
+			</div>
+			<div>
+				<label for="name">Name</label><br>
+				<input type="text" id="name" placeholder="Name" required>
+			</div>
+			<div>
+				<label for="email">Email</label><br>
+				<input type="email" id="email" placeholder="Email" required>
+			</div>
+			<div>
+				<label for="request">Type of request</label><br>
+				<select id="request">
+					<option value="infos">Request informations</option>
+					<option value="improvements">Suggest improvements</option>
+					<option value="bug">Report a bug</option>
+					<option value="inappropriate">Report inappropriate content</option>
+				</select>
+			</div>
+			<div>
+				<label for="message">Message</label><br>
+				<textarea id="message" placeholder="Your Message" required></textarea>
+			</div>
+			<input type="submit" value="Submit">
+		</form>
 	</main>
 	<footer>
 		Copyright © 2019 Tardigradus
