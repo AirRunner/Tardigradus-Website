@@ -28,8 +28,11 @@ header {
     flex-grow: 1;
     color: #EDF0F1;
     text-align: center;
-    padding: 15px 15px;
+    padding: 20px 15px 15px 15px;
     text-decoration: none;
+}
+#navbar .logo{
+    padding: 5px 0px 0px 0px;
 }
 #navbar a:hover {
     background-color: #10151A;
@@ -41,6 +44,10 @@ header {
 }
 .active:hover {
     background-color: #447EB4 !important;
+    animation-duration: 0s !important;
+}
+#navbar .logo:hover {
+    background-color: #2F3E4E !important;
     animation-duration: 0s !important;
 }
 @keyframes colorFade {
