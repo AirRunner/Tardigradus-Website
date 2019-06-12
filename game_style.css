@@ -134,7 +134,9 @@ header {
     max-width: 75%;
     margin: auto;
     margin-top: 100px;
+    padding: 4rem;
     background-color: #39495C;
+    box-shadow: 0 0 30px rgba(16,14,23,.75);
 }
 
 #logo {
@@ -142,7 +144,7 @@ header {
     top: -50px;
     left: -50px;
     width: 100px;
-    z-index: 100;
+    z-index: 3;
 }
 
 #logo img {
@@ -176,6 +178,7 @@ header {
 /* MAIN */
 main {
     padding: 10px;
+    padding-bottom: 4rem;
     background-color: #EDF0F1;
     margin: auto;
     margin-top: auto;

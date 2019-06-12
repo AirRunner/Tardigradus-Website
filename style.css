@@ -134,7 +134,7 @@ header {
 /* GAMES */
 div.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 25rem);
+    grid-template-columns: repeat(auto-fit, minmax(330px, 55rem));
     grid-gap: 1rem;
     place-content: space-between space-around;
     grid-auto-columns: 1fr;
@@ -145,7 +145,7 @@ div.item a {
     text-decoration: none;
 }
 div.game {
-    margin: 3px;
+    padding: 1rem;
     background-color: #10151A;
     border-radius: 1rem;
     box-shadow: 0 0 30px rgba(16,14,23,.25);
@@ -164,7 +164,7 @@ div.image img{
 }
 
 #insert_name {
-    background: url(Background.jpg) no-repeat, center center fixed;
+    background: url(assets/insert_name_screen.png) center center no-repeat;
     filter: grayscale(100%); /* Current draft standard */
     -webkit-filter: grayscale(100%); /* New WebKit */
     -moz-filter: grayscale(100%);
@@ -180,7 +180,7 @@ div.image img{
 }
 
 #chicky-graphs {
-    background:  url(Background.jpg) no-repeat, center center fixed;
+    background:  url(assets/insert_name_screen.png) center center no-repeat;
     filter: grayscale(100%); /* Current draft standard */
     -webkit-filter: grayscale(100%); /* New WebKit */
     -moz-filter: grayscale(100%);
@@ -198,6 +198,7 @@ div.image img{
 /* MAIN */
 main {
     padding: 10px;
+    padding-bottom: 4rem;
     background-color: #EDF0F1;
     margin: auto;
     margin-top: auto;
