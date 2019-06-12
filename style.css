@@ -9,6 +9,7 @@ body {
     background-position: center center;*/
     margin: 0px;
     margin-top: 60px;
+    background-color: #EDF0F1;
 }
 
 header {
@@ -148,7 +149,7 @@ div.game {
     padding: 1rem;
     background-color: #10151A;
     border-radius: 1rem;
-    box-shadow: 0 0 30px rgba(16,14,23,.25);
+    box-shadow: 0 0 30px rgba(16,14,23,.5);
 }
 div.title {
     text-align: center;
@@ -199,7 +200,6 @@ div.image img{
 main {
     padding: 10px;
     padding-bottom: 4rem;
-    background-color: #EDF0F1;
     margin: auto;
     margin-top: auto;
     overflow-x: auto;
