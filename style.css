@@ -35,7 +35,7 @@ header {
 .logo {
     display: block;
     width: 220px;
-    background: url("assets/Logo.png") no-repeat center center;
+    background: url("assets/logo.png") no-repeat center center;
     background-size: 200px;
 }
 /* Menu */
