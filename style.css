@@ -4,32 +4,53 @@
 }
 
 body {
-    /*background: url("Background.jpg");
+    /*background: url("assets/Background.jpg");
     background-attachment: fixed;
     background-position: center center;*/
     margin: 0px;
+    margin-top: 60px;
 }
 
-#navbar {
-    position: -webkit-sticky;
-    position: sticky;
+header {
+    z-index: 100;
+    position: fixed;
     top: 0px;
-    list-style-type: none;
+    width: 100%;
+}
+
+/* NAVIGATION BAR */
+.navbar {
     overflow: hidden;
+    display: flex;
+    height: 60px;
+    font-size: 18px;
     background-color: #2F3E4E;
-    color: #EDF0F1;
 }
-#navbar a {
-    float: left;
-    display: block;
-    color: #EDF0F1;
-    text-align: center;
-    padding: 15px 15px;
+.bars, .menu a, .socials a {
+    margin: auto;
     text-decoration: none;
+    text-align: center;
 }
-#navbar a:hover {
+/* Logo */
+.logo {
+    display: block;
+    width: 220px;
+    background: url("assets/Logo.png") no-repeat center center;
+    background-size: 200px;
+}
+/* Menu */
+.menu {
+    flex-grow: 2;
+    display: flex;
+}
+.menu a {
+    flex-grow: 1;
+    padding: 18px 7px 18px 7px;
+    color: #EDF0F1;
+}
+.menu a:hover, .mobile-menu a:hover {
     background-color: #10151A;
-    animation-name: colorFade;
+    animation-name: backgroundColorFade;
     animation-duration: 1s;
 }
 .active {
@@ -39,31 +60,92 @@ body {
     background-color: #447EB4 !important;
     animation-duration: 0s !important;
 }
-@keyframes colorFade {
+@keyframes backgroundColorFade {
     from {background-color: #2F3E4E;}
     to {background-color: #10151A;}
 }
+/* Socials */
+.socials {
+    flex-grow: 1;
+    display: flex;
+    background-color: #39495C;
+}
+.socials a {
+    flex-grow: 1;
+    padding: 18px 5px 18px 5px;
+    color: #EDF0F1;
+}
+.socials a:hover {
+    color: #5296D5;
+    animation-name: colorFade;
+    animation-duration: 1s;
+}
+@keyframes colorFade {
+    from {color: #EDF0F1;}
+    to {color: #5296D5;}
+}
+/* Mobile menu */
+.bars, .mobile-menu {
+    display: none;
+}
+/* Media queries */
+@media screen and (max-width: 616px) {
+    .menu, .socials {
+        display: none;
+    }
+    .bars {
+        display: block;
+        padding: 18px 15px 18px 15px;
+        color: #EDF0F1;
+    }
+    .bars:hover {
+        background-color: #10151A;
+        animation-name: backgroundColorFade;
+        animation-duration: 1s;
+    }
+    .logo {
+        flex-grow: 1;
+    }
+    .main.responsive {
+        margin-left: 200px !important;
+    }
+    .mobile-menu.responsive {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        background-color: #39495C;
+    }
+    .mobile-socials.responsive {
+        display: flex;
+    }
+    .mobile-socials.responsive a {
+        flex-grow: 1;
+    }
+    .mobile-menu.responsive a {
+        text-decoration: none;
+        text-align: center;
+        padding: 15px;
+        color: #EDF0F1;
+    }
+}
 
+/* GAMES */
 div.games {
     display: flex;
     flex-wrap: wrap;
 }
-
 div.games a {
     text-decoration: none;
 }
-
 div.game {
     margin: 3px;
     background-color: #10151A;
     border-radius: 10%;
 }
-
 div.title {
     text-align: center;
     color: #EDF0F1
 }
-
 div.image img{
     min-width: 200px;
     min-height: 200px;
@@ -71,6 +153,7 @@ div.image img{
     max-height: 300px;
 }
 
+/* MAIN */
 main {
     padding: 10px;
     background-color: #EDF0F1;
@@ -79,6 +162,46 @@ main {
     overflow-x: auto;
 }
 
+/* CONTACT FORM */
+input[type=text], input[type=email], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #BEC3C7;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+input:invalid {
+    border: 1px solid red;
+    caret-color: red;
+}
+input[type=submit] {
+    margin-top: 3px 3px;
+    border-style: none;
+    box-shadow: 0px 2px 3px 0px #C0C0C0;
+    background-color: #2F3E4E;
+    color: #EDF0F1;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    border-radius: 3px;
+}
+input[type=submit]:hover {
+    background-color: #55AC68;
+    cursor: pointer;
+}
+.box {
+    box-shadow: 5px 5px 5px 2px #EBEBEB;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+/* FOOTER */
 footer {
     display: block;
     position: fixed;
