@@ -13,12 +13,10 @@ body {
 }
 
 header {
-    z-index: 100;
     position: fixed;
     z-index: 100;
     top: 0px;
     width: 100%;
-    box-shadow: 0 4px 3px rgba(0,0,0,.5);
 }
 
 /* NAVIGATION BAR */
@@ -28,6 +26,7 @@ header {
     height: 60px;
     font-size: 18px;
     background-color: #2F3E4E;
+    box-shadow: 0 2px 4px rgba(0,0,0,.5);
 }
 .bars, .menu a, .socials a {
     margin: auto;
@@ -91,8 +90,7 @@ header {
 .bars, .mobile-menu {
     display: none;
 }
-/* Media queries */
-@media screen and (max-width: 616px) {
+@media screen and (max-width: 630px) {
     .menu, .socials {
         display: none;
     }
@@ -110,7 +108,8 @@ header {
         flex-grow: 1;
     }
     .main.responsive {
-        margin-left: 200px !important;
+        margin-left: 200px;
+        margin-right: -200px;
     }
     .mobile-menu.responsive {
         display: flex;
