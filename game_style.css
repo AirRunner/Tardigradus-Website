@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    font-family: Nunito;
+}
+
+body {
+    /*background: url("Background.jpg");
+    background-attachment: fixed;
+    background-position: center center;*/
+    margin: 0px;
+}
+
+#navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #2F3E4E;
+    color: #EDF0F1;
+}
+#navbar a {
+    float: left;
+    display: block;
+    color: #EDF0F1;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+#navbar a:hover {
+    background-color: #10151A;
+    animation-name: colorFade;
+    animation-duration: 1s;
+}
+.active {
+    background-color: #447EB4;
+}
+.active:hover {
+    background-color: #447EB4 !important;
+    animation-duration: 0s !important;
+}
+@keyframes colorFade {
+    from {background-color: #2F3E4E;}
+    to {background-color: #10151A;}
+}
+
+#game {
+    position: relative;
+    max-width: 75%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #39495C;
+}
+
+#logo {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    z-index: 100;
+}
+
+#logo img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    #logo {
+        top: -25px;
+        left: -25px;
+        width: 50px;
+    }
+}
+
+#screenshot {
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#screenshot img {
+    width: 100%;
+    max-height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#title {
+
+}
+
+main {
+    padding: 10px;
+    background-color: #EDF0F1;
+    margin: auto;
+    margin-top: auto;
+    overflow-x: auto;
+}
+
+footer {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    padding: 10px;
+    width: 100%;
+    color: #818C8D;
+    background-color: #EDF0F1;
+}
