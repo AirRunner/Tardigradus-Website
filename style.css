@@ -107,6 +107,9 @@ header {
     .logo {
         flex-grow: 1;
     }
+    .main.responsive {
+        padding-top: 18rem;
+    }
     .mobile-menu.responsive {
         display: flex;
         flex-direction: column;
