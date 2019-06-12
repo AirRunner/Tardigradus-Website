@@ -9,6 +9,7 @@ body {
     background-position: center center;*/
     margin: 0px;
     margin-top: 60px;
+    background-color: #EDF0F1;
 }
 
 header {
@@ -107,13 +108,12 @@ header {
         flex-grow: 1;
     }
     .main.responsive {
-        margin-left: 200px;
-        margin-right: -200px;
+        padding-top: 18rem;
     }
     .mobile-menu.responsive {
         display: flex;
         flex-direction: column;
-        width: 200px;
+        width: 100%;
         background-color: #39495C;
     }
     .mobile-socials.responsive {
@@ -132,10 +132,10 @@ header {
 
 #game {
     position: relative;
-    max-width: 75%;
+    max-width: 90%;
     margin: auto;
-    margin-top: 100px;
-    padding: 4rem;
+    margin-top: 50px;
+    padding: 5%;
     background-color: #39495C;
     box-shadow: 0 0 30px rgba(16,14,23,.75);
 }
@@ -152,11 +152,14 @@ header {
     width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
     #logo {
         top: -25px;
         left: -25px;
         width: 50px;
+    }
+    #game {
+        margin-top: 25px;
     }
 }
 
