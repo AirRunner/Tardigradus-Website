@@ -4,6 +4,7 @@
 	<title>Tardigradus</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="til_style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito&display=swap">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
 	<script src="index.js"></script>
@@ -18,7 +19,7 @@
 			<div class="menu">
 				<a href="index.html">Home</a>
 				<a href="games.html">Games</a>
-				<a href="blog.html" class="active">Blog</a>
+				<a href="til.html" class="active">Today I.L.</a>
 				<a href="team.html">Team</a>
 				<a href="contact.html">Contact</a>
 			</div>
@@ -31,7 +32,7 @@
 		<div class="mobile-menu">
 			<a href="index.html">Home</a>
 			<a href="games.html">Games</a>
-			<a href="blog.html" class="active">Blog</a>
+			<a href="til.html" class="active">Today I.L.</a>
 			<a href="team.html">Team</a>
 			<a href="contact.html">Contact</a>
 			<div class="mobile-socials">
@@ -42,7 +43,25 @@
 		</div>
 	</header>
 	<main class="main">
-		<p>Bonjour</p>
+		<form action="javascript:post()" method="post">
+				<h2 style="text-align: center;">You've learned something interesting today ? Share it with us !</h2>
+				<div class="form_infos">
+					<input type="text" id="name" placeholder="What's your name ?" required>
+					<input type="email" id="email" placeholder="Do you have an email ?">
+					<input type="text" id="title" placeholder="Title of your post">
+				</div>
+				<textarea id="message" placeholder="Today, I've learned..." required></textarea>
+			<button type="submit">Send</button>
+		</form>
+		<hr style="width: 75%;">
+		<h1 style="text-align: center;">The last posts</h1>
+		<div id="posts">
+			<div class="post">
+				<h3>Comment name</h3>
+				<p>Don't use <code>global</code> variables !</p>
+				<p class="author">Author</p>
+			</div>
+		</div>
 	</main>
 	<footer>
 		Copyright © 2019 Tardigradus | <a href="about.html">Legal notice</a>
