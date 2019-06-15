@@ -8,18 +8,24 @@ input[type=text], input[type=email], textarea, select {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+textarea {
+	height: 100px;
+}
 input:invalid {
 	border: 1px solid red;
 	caret-color: red;
 }
 input[type=submit] {
-	margin-top: 3px 3px;
+	display: block;
+	margin: auto;
+	width: 25%;
+	padding: 10px 0px;
 	border-style: none;
 	box-shadow: 0px 2px 3px 0px #C0C0C0;
 	background-color: #2F3E4E;
 	color: #EDF0F1;
 	text-transform: uppercase;
-	padding: 10px 10px;
+	font-size: 15px;
 	border-radius: 3px;
 }
 input[type=submit]:hover {
@@ -31,7 +37,7 @@ input[type=submit]:hover {
 	border-radius: 10px;
 	padding: 20px;
 	background-color: white;
-	max-width: 700px;
+	width: 75%;
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;

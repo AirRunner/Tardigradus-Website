@@ -2,7 +2,8 @@
 
 /* Form */
 form {
-	margin: 30px;
+	margin: auto;
+	padding: 30px;
 	max-width: 1000px;
 	overflow-x: auto;
 }
