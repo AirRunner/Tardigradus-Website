@@ -4,12 +4,12 @@
 }
 
 body {
-    /*background: url("assets/Background.jpg");
+    background: url("assets/Background.png");
     background-attachment: fixed;
-    background-position: center center;*/
+    background-position: center center;
+    background-size: contain;
     margin: 0px;
     margin-top: 60px;
-    background-color: #EDF0F1;
 }
 
 header {
@@ -26,7 +26,7 @@ header {
     height: 60px;
     font-size: 18px;
     background-color: #2F3E4E;
-    box-shadow: 0 2px 4px rgba(0,0,0,.5);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,.3);
 }
 .bars, .menu a, .socials a {
     margin: auto;
@@ -202,6 +202,52 @@ main {
     margin-top: auto;
     overflow-x: auto;
 }
+/* Home page */
+#presentation {
+    padding: 30px;
+    min-height: 90vh;
+    text-align: center;
+    background: hsla(0, 0%, 100%, .5);
+    color: #2F3E4E;
+}
+#presentation h1 {
+    text-transform: uppercase;
+    font-size: 400%;
+}
+#presentation i {
+    position: absolute;
+    font-size: 200%;
+    bottom: 10%;
+    animation: test;
+    animation-duration: 2s;
+}
+#home_logo {
+    border-radius: 100%;
+    width: 200px;
+}
+@keyframes test {
+    0% {
+        bottom: 20%;
+    }
+    100% {
+        bottom: 10%;
+    }
+}
+@media screen and (max-width: 530px) {
+    #presentation h1 {
+        font-size: 300%;
+    }
+    @media screen and (max-height: 550px) {
+        #presentation i {
+            display: none;
+        }
+    }
+}
+@media screen and (max-height: 590px) {
+    #presentation i {
+        display: none;
+    }
+}
 
 /* FOOTER */
 footer {
@@ -212,5 +258,5 @@ footer {
     width: 100%;
     color: #818C8D;
     background-color: #EDF0F1;
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
 }
