@@ -43,6 +43,7 @@ button:hover {
 	background-color: #55AC68;
 	cursor: pointer;
 }
+
 /* Posts */
 #posts {
 	display: flex;

@@ -6,6 +6,7 @@
     padding: 5%;
     background-color: #39495C;
     box-shadow: 0 0 30px rgba(16,14,23,.75);
+    border-radius: 10px;
 }
 
 #logo {
@@ -14,10 +15,6 @@
     left: -50px;
     width: 100px;
     z-index: 3;
-}
-
-#logo img {
-    width: 100%;
 }
 
 @media only screen and (max-width: 630px) {
@@ -34,11 +31,49 @@
 #screenshot {
     width: 100%;
     margin: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#screenshot img {
-    width: 100%;
     max-height: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#title {
+    color: #EDF0F1;
+    margin-bottom: 0px;
+}
+p, h3 {
+    color: #EDF0F1;
+}
+table {
+    color: #EDF0F1;
+    margin: 2px;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #EDF0F1;
+    padding: 10px;
+    text-align: center;
+}
+tr:nth-child(odd) {
+    background-color: #2F3E4E;
+}
+tr:nth-child(even) {
+    background-color: #3C5064;
+}
+th {
+    background-color: #0F151B;
+}
+#download {
+    display: block;
+    margin: auto;
+    width: 30%;
+    padding: 15px 0px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #447EB4;
+    color: #EDF0F1;
+    font-size: 17px;
+    text-transform: uppercase;
+    border-radius: 3px;    
+}
+#download:hover {
+    background-color: #2F3E4E;
+    cursor: pointer;
 }

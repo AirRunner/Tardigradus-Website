@@ -144,10 +144,14 @@ div.item a {
     text-decoration: none;
 }
 div.game {
+    margin-bottom: 20px;
     padding: 1rem;
     background-color: #10151A;
     border-radius: 1rem;
-    box-shadow: 0 0 30px rgba(16,14,23,.5);
+    box-shadow: 0 0 5px rgba(16,14,23,.2);
+}
+div.game:hover {
+    box-shadow: 0 0 20px rgba(16,14,23,.5);
 }
 div.title {
     text-align: center;
