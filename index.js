@@ -44,19 +44,46 @@ function post() {
 	postTitle.textContent = title;
 
     message = message.trim();
-    message = "    " + message;
-    var messageArray = message.split(/```/);
 
-    for (var i = 0, len = messageArray.length; i < len; i++) {
-        if(i%2 == 0) {
-            var text = document.createTextNode(messageArray[i]);
-	        postMessage.appendChild(text);
+    var array = [];
+    var lastPos = 0;
+    var pos = 0;
+    var i = 0;
+    while (pos != -1) {
+        pos = message.indexOf("```", lastPos);
+        if(pos != -1) {
+            if(pos != lastPos) {
+                array.push("t" + message.slice(lastPos, pos));
+            }
+            lastPos = pos+3;
+            pos = message.indexOf("```", lastPos);
+            if(pos != -1) {
+                array.push("p" + message.slice(lastPos, pos));
+                lastPos = pos+3;
+            }
         }
-        else {
-            var code = document.createElement("code");
-            var text = document.createTextNode(messageArray[i]);
-	        code.appendChild(text);
-	        postMessage.appendChild(code);
+        else
+        {
+            array.push("t" + message.slice(lastPos, message.length));
+        }
+    }
+
+    console.log(array);
+
+    for (i = 0, len = array.length; i < len; i++) {
+        var id = array[i].slice(0,1);
+        var text = array[i].slice(1, array[i].length);
+        if(id == "t") {
+            textNode = document.createTextNode(text);
+            postMessage.appendChild(textNode);
+        }
+        if(id == "p") {
+            codeNode = document.createElement("code");
+            textNode = document.createTextNode(text);
+	        codeNode.appendChild(textNode);
+	        preNode = document.createElement("pre");
+	        preNode.appendChild(codeNode);
+	        postMessage.appendChild(preNode);
         }
     }
 	
