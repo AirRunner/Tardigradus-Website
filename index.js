@@ -30,7 +30,7 @@ function openMenu() {
 
 function post() {
 	var name = document.getElementById("name").value;
-//	var email = document.getElementById("email").value;
+  	var email = document.getElementById("email").value;
 	var message = document.getElementById("message").value;
 	var title = document.getElementById("title").value;
 	
@@ -40,10 +40,28 @@ function post() {
 	var postTitle = document.createElement("h3");
 	var postMessage = document.createElement("p");
 	var postName = document.createElement("p");
-	
+
 	postTitle.textContent = title;
-	postMessage.textContent = message;
-	postName.textContent = name;
+
+    message = message.trim();
+    message = "    " + message;
+    var messageArray = message.split(/```/);
+
+    for (var i = 0, len = messageArray.length; i < len; i++) {
+        if(i%2 == 0) {
+            var text = document.createTextNode(messageArray[i]);
+	        postMessage.appendChild(text);
+        }
+        else {
+            var code = document.createElement("code");
+            var text = document.createTextNode(messageArray[i]);
+	        code.appendChild(text);
+	        postMessage.appendChild(code);
+        }
+    }
+	
+
+	postName.textContent = name + " <" + email + ">";
 	
 	post.classList.add("post");
 	postName.classList.add("author");
