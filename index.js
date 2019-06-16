@@ -3,14 +3,6 @@ function submit() {
 }
 
 function openMenu() {
-	var main = document.getElementsByClassName("main");
-	if (main[0].className === "main") {
-		main[0].classList.add("responsive");
-	}
-	else {
-		main[0].className = "main";
-	}
-	
 	var menu = document.getElementsByClassName("mobile-menu");
 	if (menu[0].className === "mobile-menu") {
 		menu[0].classList.add("responsive");
