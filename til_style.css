@@ -59,6 +59,7 @@ button:hover {
 	text-align: left;
 	border-radius: 10px;
 	overflow-x: auto;
+    white-space: pre-wrap;
 }
 .author {
 	font-style: italic;
@@ -67,9 +68,22 @@ button:hover {
 code {
 	font-family: monospace;
 	font-size: 110%;
-	background: #d5e9f5;
+    background: #2f3136;
 	padding: 2px 5px;
 	border-radius: 5px;
+    color: #839496;
+    white-space: pre-wrap;
+}
+
+pre code {
+    display: block;
+}
+pre {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    background: #2f3136;
+    border-color: rgba(32, 34, 37, 0.3);
 }
 @media screen and (max-width: 660px) {
 	.post {
