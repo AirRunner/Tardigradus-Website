@@ -30,7 +30,7 @@ function openMenu() {
 
 function post() {
 	var name = document.getElementById("name").value;
-  	var email = document.getElementById("email").value;
+	var email = document.getElementById("email").value;
 	var message = document.getElementById("message").value;
 	var title = document.getElementById("title").value;
 	
@@ -43,52 +43,56 @@ function post() {
 
 	postTitle.textContent = title;
 
-    message = message.trim();
+	message = message.trim();
 
-    var array = [];
-    var lastPos = 0;
-    var pos = 0;
-    var i = 0;
-    while (pos != -1) {
-        pos = message.indexOf("```", lastPos);
-        if(pos != -1) {
-            if(pos != lastPos) {
-                array.push("t" + message.slice(lastPos, pos));
-            }
-            lastPos = pos+3;
-            pos = message.indexOf("```", lastPos);
-            if(pos != -1) {
-                array.push("p" + message.slice(lastPos, pos));
-                lastPos = pos+3;
-            }
-        }
-        else
-        {
-            array.push("t" + message.slice(lastPos, message.length));
-        }
-    }
+	var array = [];
+	var lastPos = 0;
+	var pos = 0;
+	var i = 0;
+	while (pos != -1) {
+		pos = message.indexOf("```", lastPos);
+		if(pos != -1) {
+			if(pos != lastPos) {
+				array.push("t" + message.slice(lastPos, pos));
+			}
+			lastPos = pos+3;
+			pos = message.indexOf("```", lastPos);
+			if(pos != -1) {
+				array.push("p" + message.slice(lastPos, pos));
+				lastPos = pos+3;
+			}
+		}
+		else
+		{
+			array.push("t" + message.slice(lastPos, message.length));
+		}
+	}
 
-    console.log(array);
+	console.log(array);
 
-    for (i = 0, len = array.length; i < len; i++) {
-        var id = array[i].slice(0,1);
-        var text = array[i].slice(1, array[i].length);
-        if(id == "t") {
-            textNode = document.createTextNode(text);
-            postMessage.appendChild(textNode);
-        }
-        if(id == "p") {
-            codeNode = document.createElement("code");
-            textNode = document.createTextNode(text);
-	        codeNode.appendChild(textNode);
-	        preNode = document.createElement("pre");
-	        preNode.appendChild(codeNode);
-	        postMessage.appendChild(preNode);
-        }
-    }
+	for (i = 0, len = array.length; i < len; i++) {
+		var id = array[i].slice(0,1);
+		var text = array[i].slice(1, array[i].length);
+		if(id == "t") {
+			textNode = document.createTextNode(text);
+			postMessage.appendChild(textNode);
+		}
+		if(id == "p") {
+			codeNode = document.createElement("code");
+			textNode = document.createTextNode(text);
+			codeNode.appendChild(textNode);
+			preNode = document.createElement("pre");
+			preNode.appendChild(codeNode);
+			postMessage.appendChild(preNode);
+		}
+	}
 	
-
-	postName.textContent = name + " <" + email + ">";
+	if (email) {
+		postName.textContent = name + " <" + email + ">";
+	}
+	else {
+		postName.textContent = name;
+	}
 	
 	post.classList.add("post");
 	postName.classList.add("author");
