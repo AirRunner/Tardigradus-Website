@@ -65,8 +65,8 @@ button:hover {
 	text-align: right;
 }
 code {
-	font-family: Menlo;
-	font-size: 90%;
+	font-family: monospace;
+	font-size: 110%;
 	background: #d5e9f5;
 	padding: 2px 5px;
 	border-radius: 5px;
