@@ -5,7 +5,7 @@ function submit() {
 function openMenu() {
 	var main = document.getElementsByClassName("main");
 	if (main[0].className === "main") {
-		main[0].className += " responsive";
+		main[0].classList.add("responsive");
 	}
 	else {
 		main[0].className = "main";
@@ -13,7 +13,7 @@ function openMenu() {
 	
 	var menu = document.getElementsByClassName("mobile-menu");
 	if (menu[0].className === "mobile-menu") {
-		menu[0].className += " responsive";
+		menu[0].classList.add("responsive");
 	}
 	else {
 		menu[0].className = "mobile-menu";
@@ -21,7 +21,7 @@ function openMenu() {
 	
 	var socials = document.getElementsByClassName("mobile-socials");
 	if (socials[0].className === "mobile-socials") {
-		socials[0].className += " responsive";
+		socials[0].classList.add("responsive");
 	}
 	else {
 		socials[0].className = "mobile-socials";
@@ -53,4 +53,20 @@ function post() {
 	post.appendChild(postName);
 	
 	posts.appendChild(post);
+}
+
+function articles() {
+	var titles = document.getElementsByClassName("title");
+	for (var i=0; i<titles.length; i++) {
+		titles[i].addEventListener("click", function() {
+			this.classList.toggle("opened");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight) {
+				content.style.maxHeight = null;
+			}
+			else {
+				content.style.maxHeight = content.scrollHeight + "px";
+			} 
+		});
+	}
 }

@@ -1,0 +1,44 @@
+main {
+	padding: 0px 10%;
+	padding-bottom: 4em;
+}
+.article {
+	margin-bottom: 20px;
+}
+.title {
+	width: 100%;
+	padding: 20px;
+	border: none;
+	border-radius: 10px;
+	text-align: left;
+	cursor: pointer;
+	background-color: #39495C;
+	color: white;
+	font-size: 18px;
+}
+
+.opened, .title:hover {
+	background-color: #447EB4;
+}
+
+.title:after {
+	content: "+";
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.opened:after {
+	content: "–";
+}
+
+.content {
+	margin: auto;
+	padding: 0px 20px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	border-radius: 10px;
+	background-color: #EDF0F1;
+}
